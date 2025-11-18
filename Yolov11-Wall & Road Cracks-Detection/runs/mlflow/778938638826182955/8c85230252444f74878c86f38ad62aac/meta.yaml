@@ -1,0 +1,15 @@
+artifact_uri: file:g:/Work Projects/AI & ML Projects/AI-ML-Projects/Yolov11-Wall &
+  Road Cracks-Detection/runs/mlflow/778938638826182955/8c85230252444f74878c86f38ad62aac/artifacts
+end_time: 1763486971311
+entry_point_name: ''
+experiment_id: '778938638826182955'
+lifecycle_stage: active
+run_id: 8c85230252444f74878c86f38ad62aac
+run_name: train
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763476237428
+status: 3
+tags: []
+user_id: basel
