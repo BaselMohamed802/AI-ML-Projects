@@ -1,0 +1,15 @@
+artifact_uri: file:g:/Work Projects/AI & ML Projects/AI-ML-Projects/Yolov11-License
+  Plate Recognition/runs/mlflow/894046848899007047/4ee588c10de64ca8909165d7f8abdcdc/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '894046848899007047'
+lifecycle_stage: active
+run_id: 4ee588c10de64ca8909165d7f8abdcdc
+run_name: train
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763567503814
+status: 1
+tags: []
+user_id: basel
