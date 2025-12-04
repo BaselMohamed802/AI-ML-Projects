@@ -11,7 +11,7 @@ Functions Present:
         - Function that visualizes all the images present in a folder.
     detect_cars(img_path: str):
         - Function that detects cars in an image using a YOLOv11 model (Medium Version) and visualizes the image with the detected
-          depending on wither the user wants to do so or not.
+          depending on the user if he wants to do so or not.
 """
 
 # Library Imports
