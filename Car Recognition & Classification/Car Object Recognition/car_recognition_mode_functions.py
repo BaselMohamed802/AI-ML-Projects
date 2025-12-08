@@ -1,17 +1,11 @@
 """
-Author: Basel Mohamed Mostafa Sayed
+Filename: car_recognition_mode_functions.py
+Creator/Author: Basel Mohamed Mostafa Sayed
+Date: 12/8/2025
+
 Description:
     This file contains the functions that are used for the car recognition Yolo Model.
     These functions will be used later on for the final Classification Project.
-
-Functions Present:
-    save_imgs(folder_path: str):
-        - Save all images present in a folder and returns a list containing all the images paths.
-    visualize_imgs(imgs_path: str):
-        - Function that visualizes all the images present in a folder.
-    detect_cars(img_path: str):
-        - Function that detects cars in an image using a YOLOv11 model (Medium Version) and visualizes the image with the detected
-          depending on the user if he wants to do so or not.
 """
 
 # Library Imports
@@ -49,7 +43,15 @@ def save_imgs(folder_path: str):
     return imgs_paths
 
 def visualize_imgs(imgs_path):
-    # Example Usage of the save imgs function
+    """
+    Visualize all images present in a folder function
+
+    Args:
+        imgs_path (str): Path of the folder containing the images.
+
+    Returns:
+        None
+    """
     imgs = save_imgs(imgs_path)
 
     # Visualize Images
