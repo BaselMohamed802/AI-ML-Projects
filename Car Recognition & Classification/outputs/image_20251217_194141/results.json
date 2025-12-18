@@ -1,0 +1,29 @@
+{
+  "image_path": "G:\\Work Projects\\AI & ML Projects\\AI-ML-Projects\\Car Recognition & Classification\\Model Test Input\\2011-hyundai-i10-04.jpg",
+  "detections": [
+    {
+      "bbox": [
+        453,
+        979,
+        2788,
+        1981
+      ],
+      "confidence": 0.9706217050552368,
+      "class_id": 2,
+      "class_name": "car",
+      "make": "['Hyundai ']",
+      "model": "['i10']",
+      "year": 2011
+    }
+  ],
+  "classifications": [
+    {
+      "make": "['Hyundai ']",
+      "model": "['i10']",
+      "year": 2011,
+      "make_id": 118,
+      "model_id": 987
+    }
+  ],
+  "output_image": "Car Recognition & Classification\\outputs\\image_20251217_194141\\result_2011-hyundai-i10-04.jpg"
+}

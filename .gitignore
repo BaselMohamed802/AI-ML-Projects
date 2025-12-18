@@ -6,3 +6,7 @@
 .idea
 .vscode
 /Car Recognition & Classification/modules
+/Car Recognition & Classification/__pycache__
+/Car Recognition & Classification/sort
+/Car Recognition & Classification/pipeline_outputs
+/Car Recognition & Classification/Model Test Input
