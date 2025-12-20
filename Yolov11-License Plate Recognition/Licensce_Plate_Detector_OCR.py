@@ -1,7 +1,7 @@
 """
 Filename: Licensence_Plate_Detector_OCR.py
 Creator/Author: Basel Mohamed Mostafa Sayed
-Date: 12/18/2025
+Date: 12/19/2025
 
 Description:
     This file is the main pipeline the license plate detection and Text extraction using OCR.
@@ -29,7 +29,7 @@ import easyocr
 # Load the SORT object tracker module
 from sort.sort import *
 
-# Mapping dictionaries for character conversion
+# Mapping dictionaries for character conversion (UK License Plates)
 dict_char_to_int = {'O': '0',
                     'I': '1',
                     'J': '3',
@@ -419,7 +419,6 @@ class LicensePlateDetectorOCR:
                 }
                 results.append(result)
                 
-                # Draw on image
                 # Draw vehicle box (green)
                 cv2.rectangle(annotated_frame, (xcar1, ycar1), (xcar2, ycar2), (0, 255, 0), 2)
                 cv2.putText(annotated_frame, f"V{int(track_id)}", 
@@ -606,9 +605,12 @@ if __name__ == "__main__":
     # Initialize the pipeline
     detector = LicensePlateDetectorOCR(
         license_plate_model_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Yolov11-License Plate Recognition\Yolov11-License-Plate-Model\train5\weights\best.pt",  # Your trained license plate model
-        car_yolo_model_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Yolov11-License Plate Recognition\yolo11s.pt",    # Vehicle detection model
-        conf_threshold=0.3,
-        device='cuda'  # Changed to cuda since you're using GPU
+        car_yolo_model_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Basic YOLOv11 Models\Object Detection\yolo11m.pt",    # Vehicle detection model
+        conf_threshold=0.75,
+        iou_threshold=0.5,
+        max_age_sort_track=15,
+        min_hits_sort_track=5,
+        device='cuda'
     )
     
     # Process a single image
