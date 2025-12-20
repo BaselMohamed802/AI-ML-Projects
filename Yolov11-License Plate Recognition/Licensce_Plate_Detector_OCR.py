@@ -79,7 +79,7 @@ class LicensePlateDetectorOCR:
                             iou_threshold=iou_threshold)
         print(f"SORT tracker initialized (max_age={max_age_sort_track}, min_hits={min_hits_sort_track}, iou_threshold={iou_threshold})")
 
-        # Initialize OCR reader once (not in every function call)
+        # Initialize OCR reader
         self.reader = easyocr.Reader(['en'], gpu=(self.device == 'cuda'))
 
         # Create/Add Output directory
@@ -606,7 +606,7 @@ if __name__ == "__main__":
     detector = LicensePlateDetectorOCR(
         license_plate_model_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Yolov11-License Plate Recognition\Yolov11-License-Plate-Model\train5\weights\best.pt",  # Your trained license plate model
         car_yolo_model_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Basic YOLOv11 Models\Object Detection\yolo11m.pt",    # Vehicle detection model
-        conf_threshold=0.75,
+        conf_threshold=0.7,
         iou_threshold=0.5,
         max_age_sort_track=15,
         min_hits_sort_track=5,
@@ -618,7 +618,7 @@ if __name__ == "__main__":
     
     # Process a video
     results = detector.process_video(
-        video_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Yolov11-License Plate Recognition\2103099-hd_1920_1080_30fps.mp4",
+        video_path=r"G:\Work Projects\AI & ML Projects\AI-ML-Projects\Car Recognition & Classification\Model Test Input\Cars Video 1.mp4",
         output_path="output_video.mp4",
         max_frames=None,
         skip_frames=1,
